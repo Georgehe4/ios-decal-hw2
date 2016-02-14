@@ -105,8 +105,6 @@ class KeyboardViewController: UIInputViewController {
         rightButton.addTarget(self, action: "rightTap", forControlEvents: .TouchUpInside)
         deleteButton.addTarget(self, action: "deleteTap", forControlEvents: .TouchUpInside)
         returnButton.addTarget(self, action: "returnTap", forControlEvents: .TouchUpInside)
-        
-
 }
 
 
