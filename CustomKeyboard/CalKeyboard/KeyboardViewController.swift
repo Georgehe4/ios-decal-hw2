@@ -74,7 +74,12 @@ class KeyboardViewController: UIInputViewController {
         let proxy = textDocumentProxy as UITextDocumentProxy
         proxy.deleteBackward()
     }
-    
+    func buttonLayout(button: UIButton) {
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.blackColor().CGColor
+        button.layer.cornerRadius = button.frame.height/2
+        button.layer.backgroundColor = UIColor.redColor().CGColor
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated
@@ -105,6 +110,14 @@ class KeyboardViewController: UIInputViewController {
         rightButton.addTarget(self, action: "rightTap", forControlEvents: .TouchUpInside)
         deleteButton.addTarget(self, action: "deleteTap", forControlEvents: .TouchUpInside)
         returnButton.addTarget(self, action: "returnTap", forControlEvents: .TouchUpInside)
+        buttonLayout(aButton)
+        buttonLayout(bButton)
+        buttonLayout(xButton)
+        buttonLayout(yButton)
+        buttonLayout(upButton)
+        buttonLayout(downButton)
+        buttonLayout(leftButton)
+        buttonLayout(rightButton)
 }
 
 
